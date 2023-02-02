@@ -71,7 +71,8 @@ const connectclient = async () => {
   }
 };
 const disconnect = async () => {
-  console.log('Closed')
+  winston.info(`Closed`);
+
   try {
     await sftpcLient.end();
     winston.info(`Disconnected -  ${new Date()}`);
@@ -103,7 +104,7 @@ const createReferenceDirectory = async (directory, path) => {
   }
 };
 const connectclientInfo = async () => {
-  console.log('Initiated')
+  winston.info(`Initiated`);
   await connectclient();
   await listQueueDirectory();
 
@@ -141,12 +142,9 @@ const connectclientInfo = async () => {
 };
 connectclientInfo();
 
-
 var job = new CronJob("*/10 * * * *", function () {
   console.log(`cron triggered- ${new Date()}`);
   connectclientInfo();
 });
- 
 
 job.start();
-
