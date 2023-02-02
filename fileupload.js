@@ -125,7 +125,7 @@ const connectclientInfo = async () => {
     const fname = filePath.slice(filePath.lastIndexOf("\\") + 1);
 
     if (!queueDirectorylist.includes(rpath)) {
-      await createDirectory(`/upload/${rpath}`);
+      await createDirectory(`/${rpath}`);
     }
     if (!referenceDirectorylist.includes(rpath)) {
       await createReferenceDirectory(
@@ -133,7 +133,7 @@ const connectclientInfo = async () => {
         `${localpath}\\Reference\\`
       );
     }
-    await uploadFile(filePath, `/upload/${rpath}/${fname}`);
+    await uploadFile(filePath, `/${rpath}/${fname}`);
     await moveFile(filePath, `${localpath}Reference\\${rpath}\\${fname}`);
   }
 
