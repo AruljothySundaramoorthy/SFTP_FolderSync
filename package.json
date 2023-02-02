@@ -1,0 +1,30 @@
+{
+  "name": "node-sftp",
+  "version": "1.0.0",
+  "description": "Node SFTP",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AruljothySundaramoorthy/node-sftp.git"
+  },
+  "keywords": [
+    "node",
+    "sftp"
+  ],
+  "author": "Aruljothy Sundaramoorthy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AruljothySundaramoorthy/node-sftp/issues"
+  },
+  "homepage": "https://github.com/AruljothySundaramoorthy/node-sftp#readme",
+  "dependencies": {
+    "dotenv": "16.0.1",
+    "ssh2-sftp-client": "9.0.1",
+    "winston": "3.8.0",
+    "winston-daily-rotate-file": "4.6.1",
+    "cron": "^1.8.2"
+  }
+}
